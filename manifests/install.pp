@@ -8,7 +8,7 @@ class check_mk::install (
   String $site,
   Stdlib::Absolutepath $workspace,
   Optional[String] $filestore = undef,
-  Optional[Pattern[/^(check-mk-(\w*))(-|_)(\d*\.\d*\.\d*p\d*).+\.(\w+)$/]] $package = undef,
+  Optional[String] $package = undef,
 ) {
   if $filestore {
     if ! defined(File[$workspace]) {
