@@ -23,7 +23,7 @@ class check_mk::install (
     }
 
     # check-mk-raw-1.5.0p7_0.stretch_amd64.deb
-    if $package =~ /^(check-mk-\w*(-|_)\d*\.\d*\.\d*p\d*).+\.(\w+)$/ {
+    if $package =~ /^(check-mk-\w*(-|_)\d*\.\d*\.\d*).+\.(\w+)$/ {
       $type = $3
       $package_name = $1
 
