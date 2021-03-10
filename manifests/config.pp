@@ -33,7 +33,7 @@ class check_mk::config (
   # # all_hosts
   concat::fragment { 'all_hosts-header':
     target  => "${etc_dir}/check_mk/main.mk",
-    content => "all_hosts = [\n",
+    content => "all_hosts += [\n",
     order   => 10,
   }
 
