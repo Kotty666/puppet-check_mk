@@ -17,7 +17,7 @@ class check_mk::agent::install (
     }
 
     # check-mk-agent_1.5.0p7-1_all.deb
-    if $package =~ /^(check-mk-(\w*))(-|_)(\d*\.\d*\.\d*p\d*).+\.(\w+)$/ {
+    if $package =~ /^(check-mk-(\w*))(-|_)(\d*\.\d*\.\d*).+\.(\w+)$/ {
       case $5 {
         'deb':     {
           $type = 'dpkg'
